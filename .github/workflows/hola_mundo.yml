@@ -1,0 +1,16 @@
+name: Mi Primer Hola Mundo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+      
+      - name: Ejecutar script en Python
+        run: python hola_mundo.py
